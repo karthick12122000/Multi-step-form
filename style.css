@@ -1,0 +1,119 @@
+
+:root{
+
+/* ### Primary */
+
+--Marineblue: hsl(213, 96%, 18%);
+--Purplishblue: hsl(243, 100%, 62%);
+--Pastelblue: hsl(228, 100%, 84%);
+--Lightblue: hsl(206, 94%, 87%);
+--Strawberryred: hsl(354, 84%, 57%);
+
+/* ### Neutral */
+
+--Coolgray: hsl(231, 11%, 63%);
+--Lightgray: hsl(229, 24%, 87%);
+--Magnolia: hsl(217, 100%, 97%);
+--Alabaster: hsl(231, 100%, 99%);
+--White: hsl(0, 0%, 100%);
+}
+@font-face {
+    font-family: ubuntu-Bold;
+    src: url(./assets/fonts/Ubuntu-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: ubuntu-medium;
+    src: url(./assets/fonts/Ubuntu-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: ubuntu-regular;
+    src: url(./assets/fonts/Ubuntu-Regular.ttf);
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--Magnolia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100svh;
+    font-family: ubuntu-regular;
+}
+.form{
+    width: 945px;
+    height: 600px;
+background: var(--White);
+border-radius: 15px;
+padding: 16px;
+box-sizing: border-box;
+display: flex;
+
+}
+.tab{
+width: 274px;
+height: 568px;
+background-image: url(./assets/images/bg-sidebar-desktop.svg);
+}
+
+.Carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+
+}
+
+
+.sub {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+.sub p{
+    line-height: 4px;
+    color: var(--White);
+}
+.sub p:nth-child(2){
+    font-style: bold;
+}
+.sub div:nth-child(1) {
+    
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   cursor: pointer;
+    font-size: 16px;
+    color: var(--White);
+    border: 0.5px solid var(--White);
+   
+
+}
+
+.sub div:nth-child(1):hover {
+    border-color: var(--Lightblue);
+}
+
+.sub div:nth-child(1) .active {
+    background: var(--Lightblue);
+    color: var(--black);
+}
+.main{
+    width: 655px;
+    height: 568px;
+    
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
