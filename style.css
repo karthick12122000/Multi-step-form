@@ -130,8 +130,7 @@ border-radius: 10px;
 .pinfo--descrp ,.SYP--descrp{
     color: var(--Coolgray);
 }
-.pinfo--fields,.SYP--fields{
-    display: flex;
+.pinfo--fields{
     flex-direction: column;
 }
 
@@ -184,8 +183,38 @@ width: 125px;
     left: 0;
 }
 
-.SYP{
+.pinfo{
     display: none;
+}
+
+
+
+.SYP--fields{
+    display: flex;
+gap: 30px;
+}
+
+.plan{
+    width: 155px;
+    height: 160px;
+    border: 1px solid var(--Lightgray);
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-top: 20px;
+    box-sizing: border-box;
+   
+}
+.plan:hover{
+    background: var(--Alabaster);
+    border-color: var(--Purplishblue);
+}
+.plan .title{
+    font-family: 'ubuntu-bold';
+    color: var(--Marineblue);
+}
+.plan .rate{
+    font-family: 'ubuntu-bold';
+    color: var(--Coolgray);
 }
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
