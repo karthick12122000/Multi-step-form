@@ -100,7 +100,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+   
     font-size: 16px;
     color: var(--White);
     border: 0.5px solid var(--White);
@@ -204,6 +204,7 @@ input[type=number]::-webkit-inner-spin-button {
     border: none;
     position: absolute;
     left: 0;
+    display: none;
 }
 
 .pinfo,
@@ -246,6 +247,11 @@ input[type=number]::-webkit-inner-spin-button {
 
 .active {
     display: initial;
+}
+.activeT{
+    color: var(--Marineblue) !important;
+    background: var(--Lightblue);
+    
 }
 
 .attribution {
