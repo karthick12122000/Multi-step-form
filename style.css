@@ -193,6 +193,7 @@ input[type=number]::-webkit-inner-spin-button {
     border-radius: 10px;
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
 
 .btn--GBack {
@@ -205,6 +206,10 @@ input[type=number]::-webkit-inner-spin-button {
     position: absolute;
     left: 0;
     display: none;
+    cursor: pointer;
+}
+.btn--GBack:hover {
+    color: var(--Marineblue);
 }
 
 .pinfo,
@@ -217,7 +222,9 @@ input[type=number]::-webkit-inner-spin-button {
 .SYP--fields {
     display: flex;
     gap: 30px;
+    margin-top: 40px;
 }
+
 
 .plan {
     width: 155px;
@@ -230,11 +237,17 @@ input[type=number]::-webkit-inner-spin-button {
 
 }
 
-.plan:hover {
+.plan:hover { 
+    border-color: var(--Purplishblue);
+}
+input[name="plan"]{
+
+ display: none;
+}
+input[name="plan"]:checked+label  div{
     background: var(--Alabaster);
     border-color: var(--Purplishblue);
 }
-
 .plan .title {
     font-family: 'ubuntu-bold';
     color: var(--Marineblue);
@@ -253,11 +266,25 @@ input[type=number]::-webkit-inner-spin-button {
     background: var(--Lightblue);
     
 }
+.plan--switch{
+    width: inherit;
+    height:50px ;
+    border-radius: 5px;
+    background: var(--Alabaster);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    margin-top: 32px;
+}
+.plan--switch span:nth-child(1){
+    margin-right: 15px;
+}
 #toggle{
     display: none;
 }
 
-.toggle--back{
+.switch--back{
     display: inline-block;
     width: 46px;
     background: var(--Marineblue);
@@ -270,12 +297,12 @@ input[type=number]::-webkit-inner-spin-button {
     height: 15px;
     border-radius: 50%;
     background: var(--White);
-    transform: translateX(-48px) translateY(-2.5px);
+    transform: translateX(-52px);
     transition: 0.15s;
 
 }
 #toggle:checked + .slider{
-    transform: translateX(-22px) translateY(-2.5px);
+    transform: translateX(-29px);
 }
 .attribution {
     font-size: 11px;

@@ -68,27 +68,39 @@
           <h1 class="SYP--title"> Select your plan</h1>
           <p class="SYP--descrp"> You have the option of monthly or yearly billing</p>
           <div class="SYP--fields">
-            <div class="plan" id="arcade">
-              <img src="./assets/images/icon-arcade.svg" alt="Arcade icon">
-              <p class="title">Arcade</p>
-              <p class="rate">$9/mo</p>
 
-            </div>
-            <div class="plan" id="advanced">
-              <img src="./assets/images/icon-advanced.svg" alt="Advanced icon">
-              <p class="title">Advanced</p>
-              <p class="rate">$12/mo</p>
-            </div>
+            <input type="radio" name="plan" value="arcade" id="adrc">
+            <label for="adrc">
+              <div class="plan" id="arcade">
+                <img src="./assets/images/icon-arcade.svg" alt="Arcade icon">
+                <p class="title">Arcade</p>
+                <p class="rate">$9/mo</p>
+              </div>
+            </label>
+            <input type="radio" name="plan" value="advanced" id="advanc">
+            <label for="advanc">
+              <div class="plan" id="advanced">
+                <img src="./assets/images/icon-advanced.svg" alt="Advanced icon">
+                <p class="title">Advanced</p>
+                <p class="rate">$12/mo</p>
+              </div>
+            </label>
+            <input type="radio" name="plan" value="pro" id="prop">
+            <label for="prop">
             <div class="plan" id="pro">
               <img src="./assets/images/icon-pro.svg" alt="Pro icon">
               <p class="title">Pro</p>
               <p class="rate">$15/mo</p>
             </div>
-            
+          </label>
           </div>
-          <label for="toggle" class="toggle--back"></label>
+          <div class="plan--switch">
+            <span>Monthly</span>
+            <label for="toggle" class="switch--back"></label>
             <input type="checkbox" id="toggle">
             <span class="slider"></span>
+            <span>Yearly</span>
+          </div>
         </div>
         <div class="btn">
           <button class="btn--GBack" id="GBack">Go Back</button>
