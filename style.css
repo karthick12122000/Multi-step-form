@@ -227,13 +227,14 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 .plan {
-    width: 155px;
-    height: 160px;
+    width: 130px;
+    height: 180px;
     border: 1px solid var(--Lightgray);
     border-radius: 5px;
     padding-left: 15px;
     padding-top: 20px;
     box-sizing: border-box;
+    cursor: pointer;
 
 }
 
@@ -245,17 +246,25 @@ input[name="plan"]{
  display: none;
 }
 input[name="plan"]:checked+label  div{
-    background: var(--Alabaster);
+    background: var(--Magnolia);
     border-color: var(--Purplishblue);
 }
 .plan .title {
     font-family: 'ubuntu-bold';
     color: var(--Marineblue);
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
 .plan .rate {
     font-family: 'ubuntu-regular';
     color: var(--Coolgray);
+    margin: 8px   0px;
+}
+.plan .free{
+    font-size: 0.8rem;
+    margin: 0px;
+    
 }
 
 .active {
@@ -270,15 +279,21 @@ input[name="plan"]:checked+label  div{
     width: inherit;
     height:50px ;
     border-radius: 5px;
-    background: var(--Alabaster);
+    background: var(--Magnolia);
     display: flex;
     align-items: center;
     justify-content: center;
     gap:10px;
     margin-top: 32px;
+   
+}
+.plan--switch span{
+    font-family: 'ubuntu-bold';
+    color: var(--Coolgray);
 }
 .plan--switch span:nth-child(1){
     margin-right: 15px;
+    color: var(--Marineblue);
 }
 #toggle{
     display: none;
@@ -290,6 +305,7 @@ input[name="plan"]:checked+label  div{
     background: var(--Marineblue);
     height: 20px;
     border-radius: 30px;
+    cursor: pointer;
 }
 .slider{
     display: inline-block;
@@ -303,6 +319,9 @@ input[name="plan"]:checked+label  div{
 }
 #toggle:checked + .slider{
     transform: translateX(-29px);
+}
+#toggle:checked + span:nth-child(2){
+    color: var(--Marineblue);
 }
 .attribution {
     font-size: 11px;
