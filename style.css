@@ -128,18 +128,18 @@ body {
 }
 
 .pinfo,
-.SYP {
+.SYP,.addons,.summary {
     width: 450px;
     height: 500px;
 }
 
 .pinfo--title,
-.SYP--title {
+.SYP--title ,.addons--title,.summary--title{
     color: var(--Marineblue);
 }
 
 .pinfo--descrp,
-.SYP--descrp {
+.SYP--descrp, .addons--descrp , .summary--descrp {
     color: var(--Coolgray);
 }
 
@@ -213,7 +213,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .pinfo,
-.SYP {
+.SYP,.addons,.summary {
     display: none;
 }
 
@@ -322,6 +322,52 @@ input[name="plan"]:checked+label  div{
 }
 #toggle:checked + span:nth-child(2){
     color: var(--Marineblue);
+}
+
+.addons--fields{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.addon{
+    width: 450px;
+    height: 80px;
+    border: 1px solid var(--Lightgray);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+   
+}
+.addon div:nth-child(1){
+    width: 70px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[name="addonI"]{
+    width: 18px;
+    height: 18px;
+    border-color: var(--Lightgray);
+}
+input[name="addonI"]:checked{
+    background-color:var(--Purplishblue)
+}
+
+.addon .title {
+    font-family: 'ubuntu-bold';
+    color: var(--Marineblue);
+ 
+}
+
+.addon .rate {
+    font-family: 'ubuntu-regular';
+    color: var(--Coolgray);
+
 }
 .attribution {
     font-size: 11px;

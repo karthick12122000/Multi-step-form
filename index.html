@@ -35,14 +35,14 @@
           </div>
           <div class="sub">
 
-            <div id="Addons">3</div>
+            <div id="addonsT">3</div>
             <div class="text">
               <p>Step 3</p>
               <p><b>Add-ons</b></p>
             </div>
           </div>
           <div class="sub">
-            <div id="Summary">4</div>
+            <div id="summaryT">4</div>
             <div class="text">
               <p>Step 4</p>
               <p><b>Summary</b></p>
@@ -52,6 +52,7 @@
         </div>
       </div>
       <div class="main">
+        <!-- personal plan -->
         <div class="pinfo active" id="personalInfo">
           <h1 class="pinfo--title"> Personal info</h1>
           <p class="pinfo--descrp">Please provide your name, email address, and phone number.</p>
@@ -64,6 +65,7 @@
             <input type="number" placeholder="e.g. +1 234 567 890" required>
           </div>
         </div>
+        <!-- plan -->
         <div class="SYP" id="plan">
           <h1 class="SYP--title"> Select your plan</h1>
           <p class="SYP--descrp"> You have the option of monthly or yearly billing</p>
@@ -87,12 +89,12 @@
             </label>
             <input type="radio" name="plan" value="pro" id="prop">
             <label for="prop">
-            <div class="plan" id="pro">
-              <img src="./assets/images/icon-pro.svg" alt="Pro icon">
-              <p class="title">Pro</p>
-              <p class="rate">$15/mo</p>
-            </div>
-          </label>
+              <div class="plan" id="pro">
+                <img src="./assets/images/icon-pro.svg" alt="Pro icon">
+                <p class="title">Pro</p>
+                <p class="rate">$15/mo</p>
+              </div>
+            </label>
           </div>
           <div class="plan--switch">
             <span>Monthly</span>
@@ -102,35 +104,70 @@
             <span>Yearly</span>
           </div>
         </div>
+
+        <!-- addons -->
+        <div class="addons" id="addons">
+          <h1 class="addons--title"> Pick add-ons</h1>
+          <p class="addons--descrp">Add-ons help enhance your gaming experience.</p>
+          <div class="addons--fields">
+            <label for="onSerC">
+              <div class="addon" id="onSer">
+                <div>
+                  <input type="checkbox" name="addonI" id="onSerC">
+                </div>
+                <div>
+                  <p class="title"> Online service</p>
+                  <p class="rate">  Access to multiplayer games</p>
+                </div>
+
+              </div>
+            </label>
+            <label for="larStorC">
+              <div class="addon" id="larStor">
+                <div>
+                  <input type="checkbox" name="addonI" id="larStorC">
+                </div>
+                <div>
+                <p class="title"> Larger storage</p>
+                <p class="rate">  Extra 1TB of cloud save</p>
+              </div>
+              </div>
+            </label>
+            <label for="cusProC">
+              <div class="addon" id="cusPro">
+                <div>
+                  <input type="checkbox" name="addonI" id="cusProC">
+                </div>
+                <div>
+                <p class="title">Customizable Profile</p>
+                <p class="rate"> Custom theme on your profile</p>
+              </div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- summary -->
+        <div class="summary" id="summary">
+          <h1 class="summary--title"> Finishing up</h1>
+          <p class="summary--descrp"> Double-check everything looks OK before confirming.</p>
+
+        </div>
         <div class="btn">
           <button class="btn--GBack" id="GBack">Go Back</button>
           <button class="btn--NStep" id="NStep">Next Step</button>
         </div>
+
+
+
+
       </div>
 
   </main>
 
-  Arcade
-  $9/mo
 
-  Advanced
-  $12/mo
 
-  Pro
-  $15/mo
-
-  Monthly
-  Yearly
-
-  Go Back
-  Next Step
-
-  <!-- Step 2 end -->
-
-  <!-- Step 3 start -->
-
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
 
   Online service
   Access to multiplayer games

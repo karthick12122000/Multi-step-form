@@ -6,7 +6,7 @@ function activeFun(e) {
     var activeTab = document.querySelector(".activeT")
 
 
-    var IdList = ["personalInfo", "plan"];
+    var IdList = ["personalInfo", "plan","addons","summary"];
     // console.log(IdList.indexOf(activEle.id));
     var index = IdList.indexOf(activEle.id);
 
