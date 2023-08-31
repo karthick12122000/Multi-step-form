@@ -364,7 +364,7 @@ input[name="addonI"]:checked{
  
 }
 
-.addon .rate {
+.addon .desc {
     font-family: 'ubuntu-regular';
     color: var(--Coolgray);
 
