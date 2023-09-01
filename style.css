@@ -350,11 +350,16 @@ input[name="plan"]:checked+label  div{
 }
 
 input[name="addonI"]{
+    display: none;
+
+}
+input[name="addonI"]~span{
     width: 18px;
     height: 18px;
-    border-color: var(--Lightgray);
+    border: 1px solid var(--Lightgray);
+    border-radius: 4px;
 }
-input[name="addonI"]:checked{
+input[name="addonI"]:checked~span{
     background-color:var(--Purplishblue)
 }
 
