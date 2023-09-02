@@ -330,6 +330,7 @@ input[name="plan"]:checked+label  div{
     justify-content: center;
     flex-direction: column;
     gap: 30px;
+    margin-top: 40px;
 }
 
 .addon{
@@ -348,6 +349,14 @@ input[name="plan"]:checked+label  div{
     align-items: center;
     justify-content: center;
 }
+.addon div:nth-child(2){
+    width: 300px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
 
 input[name="addonI"]{
     display: none;
@@ -360,19 +369,36 @@ input[name="addonI"]~span{
     border-radius: 4px;
 }
 input[name="addonI"]:checked~span{
-    background-color:var(--Purplishblue)
+    background-color:var(--Purplishblue);
+    background-image: url(./assets/images/icon-checkmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.addon:has(input[name="addonI"]:checked){
+    background: var(--Magnolia);
+    border-color: var(--Purplishblue);
+   
 }
 
 .addon .title {
     font-family: 'ubuntu-bold';
     color: var(--Marineblue);
- 
+ margin: 0;
 }
 
 .addon .desc {
     font-family: 'ubuntu-regular';
     color: var(--Coolgray);
+    margin: 0;
 
+}
+.addons--fields label{
+    
+    cursor: pointer;
+}
+.addons--fields .rateA{
+color: var(--Purplishblue);
 }
 .attribution {
     font-size: 11px;
