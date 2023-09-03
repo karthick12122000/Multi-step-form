@@ -10,10 +10,12 @@ function activeFun(e) {
     // console.log(IdList.indexOf(activEle.id));
     var index = IdList.indexOf(activEle.id);
 
+//////////////////////////////-----------index
     if (e == "next") {
         var nID = IdList[index + 1];
 
         GBack.style.display = 'initial';
+      
     }
     else {
 
@@ -25,8 +27,23 @@ function activeFun(e) {
         else {
             GBack.style.display = 'initial';
         }
+      
 
     }
+///////////////////////-----------------Confirm BTN
+if ((index) == 2) {
+    nextBTN.innerText="Confirm";
+}
+else{
+    nextBTN.innerText="Next Step"
+}
+//////------------------------------------ final page
+if ((index) == IdList.length-1) {
+    nextBTN.style.display="none";
+    GBack.style.display="none";
+
+}
+    ///////////////------------active
     if (nID != null) {
         activEle.classList.remove("active");
         activeTab.classList.remove("activeT");
