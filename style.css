@@ -400,6 +400,16 @@ input[name="addonI"]:checked~span{
 .addons--fields .rateA{
 color: var(--Purplishblue);
 }
+
+.summary--fields{
+    width:450px ;
+    height: 180px;
+    background-color: var(--Lightgray);
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
 .attribution {
     font-size: 11px;
     text-align: center;

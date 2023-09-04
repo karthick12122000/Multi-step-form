@@ -16,6 +16,12 @@ function activeFun(e) {
 
         GBack.style.display = 'initial';
       
+        //////------------------------------------ final page
+
+if ((index+1) == 4) {
+    nextBTN.style.display="none";
+    GBack.style.display="none";
+}
     }
     else {
 
@@ -31,25 +37,23 @@ function activeFun(e) {
 
     }
 ///////////////////////-----------------Confirm BTN
-if ((index) == 2) {
+if ((index+1) == 3) {
     nextBTN.innerText="Confirm";
+
+//////////////---------------summary
+var selectedPlan= document.querySelector("[name='plan']:checked").value;
+console.log(selectedPlan);
 }
 else{
     nextBTN.innerText="Next Step"
 }
-//////------------------------------------ final page
-if ((index) == IdList.length-1) {
-    nextBTN.style.display="none";
-    GBack.style.display="none";
 
-}
+
     ///////////////------------active
     if (nID != null) {
         activEle.classList.remove("active");
         activeTab.classList.remove("activeT");
-
         var ele = document.getElementById(nID);
-
         ele.classList.add("active");
         var tab = document.getElementById(nID + "T");
         tab.classList.add("activeT");
@@ -99,11 +103,10 @@ else{
     planDiv[0].removeChild(planDiv[0].lastElementChild);
     planDiv[1].removeChild(planDiv[1].lastElementChild);
     planDiv[2].removeChild(planDiv[2].lastElementChild);
-
-
     addonDetails[0].innerText="+$1/mo";
     addonDetails[1].innerText="+$2/mo";
     addonDetails[2].innerText="+$2/mo";
 }
 
 });
+
