@@ -401,9 +401,9 @@ input[name="addonI"]:checked~span{
 color: var(--Purplishblue);
 }
 
-.summary--fields{
+.plan--details{
     width:450px ;
-    height: 180px;
+    min-height: 180px;
     background-color: var(--Lightgray);
     border-radius: 5px;
     padding: 25px;
