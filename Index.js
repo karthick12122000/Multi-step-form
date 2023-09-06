@@ -2,9 +2,10 @@
 var GBack = document.getElementById("GBack");
 var nextBTN = document.getElementById("NStep");
 var toggle = document.getElementById("toggle");
+
 function activeFun(e) {
-    var activEle = document.querySelector(".active");
-    var activeTab = document.querySelector(".activeT")
+    let activEle = document.querySelector(".active");
+    let activeTab = document.querySelector(".activeT");
 
 
     var IdList = ["personalInfo", "plan", "addons", "summary"];
@@ -14,7 +15,6 @@ function activeFun(e) {
     //////////////////////////////-----------index
     if (e == "next") {
         var nID = IdList[index + 1];
-
         GBack.style.display = 'initial';
 
         //////------------------------------------ final page
@@ -45,8 +45,9 @@ function activeFun(e) {
             }
 
             let rate = document.getElementById(selectedPlan.value.toLowerCase()).children[2];
+            plan.style="border-collapse:collapse";
 
-            plan.innerHTML = `<tr><td>${selectedPlan.value}(${pack})</td><td>${rate.innerText}</td></tr>`;
+            plan.innerHTML = `<tr style="color: var(--Marineblue);font-family: 'ubuntu-bold';"><td style="width:350px;       padding-top: 0px; border-bottom: 1px solid var(--Coolgray);"><p style="margin-top: 0px;">${selectedPlan.value} (${pack})</p><a href="#" id="change" onclick="change()">Change</a><br></td><td style="      padding-top: 0px;  border-bottom: 1px solid var(--Coolgray);">${rate.innerText}</td></tr>`;
 
 
             var selectedAddon = document.querySelectorAll("[name='addonI']");
@@ -60,7 +61,7 @@ function activeFun(e) {
 
                     let addonRate = document.querySelector(`#${selectedValue.id.substring(0, selectedValue.id.length - 1)}`).children[2];
                     console.log(addonRate);
-                    plan.innerHTML += `<tr><td>${selectedValue.value}</td><td>${addonRate.innerText}</td></tr>`;
+                    plan.innerHTML += `<tr><td style="color: var(--Coolgray);">${selectedValue.value}</td><td style="color: var(--Marineblue);">${addonRate.innerText}</td></tr>`;
                 }
             }
 
@@ -91,9 +92,9 @@ function activeFun(e) {
     if (nID != null) {
         activEle.classList.remove("active");
         activeTab.classList.remove("activeT");
-        var ele = document.getElementById(nID);
+        let ele = document.getElementById(nID);
         ele.classList.add("active");
-        var tab = document.getElementById(nID + "T");
+        let tab = document.getElementById(nID + "T");
         tab.classList.add("activeT");
 
     }
@@ -147,4 +148,20 @@ toggle.addEventListener('change', (e) => {
     }
 
 });
+////------------------change
 
+ var change= function(){
+
+    ///////////////------------active
+   
+        let activEle = document.querySelector(".active");
+        let activeTab = document.querySelector(".activeT");
+        activEle.classList.remove("active");
+        activeTab.classList.remove("activeT");
+        let ele = document.getElementById("plan");
+        ele.classList.add("active");
+        let tab = document.getElementById("planT");
+        tab.classList.add("activeT");
+
+    
+};
