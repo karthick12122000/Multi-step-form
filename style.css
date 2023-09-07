@@ -129,7 +129,7 @@ body {
 .pinfo,
 .SYP,
 .addons,
-.summary {
+.summary,.thankYou {
     width: 450px;
     height: 500px;
 }
@@ -218,12 +218,6 @@ input[type=number]::-webkit-inner-spin-button {
     color: var(--Marineblue);
 }
 
-.pinfo,
-.SYP,
-.addons,
-.summary {
-    display: none;
-}
 
 
 
@@ -279,15 +273,7 @@ input[name="plan"]:checked+label div {
 
 }
 
-.active {
-    display: initial;
-}
 
-.activeT {
-    color: var(--Marineblue) !important;
-    background: var(--Lightblue);
-
-}
 
 .plan--switch {
     width: inherit;
@@ -448,6 +434,54 @@ input[name="addonI"]:checked~span {
 .plan--details table a:hover{
     color: var(--Purplishblue);
 }
+
+.summary--fields div:last-child{
+    width: inherit;
+    padding: 20px;
+    
+}
+.summary--fields div:last-child p{
+    display: inline-block;
+    color: var(--Purplishblue);
+    font-family: "ubuntu-bold";
+}
+.summary--fields div:last-child p:first-child{
+  color: var(--Coolgray);
+    width: 335px;
+    font-family: "ubuntu-regular";
+}
+.thankYou--Fields{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.thankYou--Fields h1{
+    color: var(--Marineblue);
+}
+.thankYou--Fields p{
+    color: var(--Coolgray);
+}
+
+.pinfo,
+.SYP,
+.addons,
+.summary,.thankYou{
+    display: none;
+}
+.active {
+    display: initial;
+}
+
+.activeT {
+    color: var(--Marineblue) !important;
+    background: var(--Lightblue);
+
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
