@@ -157,11 +157,19 @@ body {
 
 }
 
-.pinfo--fields label {
+.pinfo--fields .labeldiv {
     color: var(--Marineblue);
     margin-top: 30px;
+    
 }
-
+.labeldiv{
+    position: relative;
+}
+.labeldiv span{
+    position: absolute;
+    right: 0;
+    color: var(--Strawberryred);
+}
 .pinfo--fields input {
     width: 450px;
     height: 50px;
@@ -176,6 +184,13 @@ body {
     box-sizing: border-box;
 }
 
+.pinfo--fields input::after{
+    content: '222';
+    background-color: blueviolet;
+    width: 100%;
+    color:yellow;
+    font-size: 50px;
+}
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;

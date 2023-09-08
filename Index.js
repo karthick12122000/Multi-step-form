@@ -14,6 +14,44 @@ function activeFun(e) {
 
     //////////////////////////////-----------index
     if (e == "next") {
+var name=document.getElementById("name");
+
+var lable=document.querySelectorAll(".labeldiv")
+if(name.value==""){
+    lable[0].querySelector("span").innerText="This field is required";
+    name.style="border-color: var(--Strawberryred)";
+    
+}
+else{
+    lable[0].querySelector("span").innerText="";
+    name.style="border-color: var(--Lightgray)";
+}
+var email=document.getElementById("email");
+
+if(email.value==""){
+    lable[1].querySelector("span").innerText="This field is required";
+    email.style="border-color: var(--Strawberryred)";
+    
+}
+else{
+    lable[1].querySelector("span").innerText="";
+    email.style="border-color: var(--Lightgray)";
+}
+
+var Pnumber=document.getElementById("Pnumber");
+
+if(Pnumber.value==""){
+    lable[2].querySelector("span").innerText="This field is required";
+    Pnumber.style="border-color: var(--Strawberryred)";
+}
+else{
+    lable[2].querySelector("span").innerText="";
+    Pnumber.style="border-color: var(--Lightgray)";
+}
+if(Pnumber.value==""||email.value==""||name.value==""){
+    return false;
+}
+
         var nID = IdList[index + 1];
         GBack.style.display = 'initial';
 
