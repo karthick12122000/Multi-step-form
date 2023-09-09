@@ -505,3 +505,64 @@ input[name="addonI"]:checked~span {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+/* -----------tablet------------- */
+@media screen and (max-width:900px) {
+.form {
+    width: 750px;
+}
+}
+
+
+/* --------------Phone------------------- */
+@media screen and (max-width:500px) {
+    .form {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--Magnolia);
+    height: auto;
+    }
+    .text{
+        display: none;
+    }
+  
+.tab {
+    width: 100%;
+    height: 172px;
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+
+}
+.Carousel {
+    width: 100%;
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width: 345px;
+    background-color: var(--White);
+}
+.pinfo{
+    width: 345px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.pinfo--title {
+font-size: 1.5rem;
+}
+.pinfo--descrp {
+    font-size: 1rem;
+    }
+.pinfo--fields input {
+width: 290px;
+}
+footer{
+    display: none;
+}
+}
