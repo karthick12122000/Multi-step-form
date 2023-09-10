@@ -515,13 +515,18 @@ input[name="addonI"]:checked~span {
 
 /* --------------Phone------------------- */
 @media screen and (max-width:500px) {
+    body{
+        justify-content: flex-start;
+    }
     .form {
         display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: var(--Magnolia);
+    width: 100%;
     height: auto;
+    padding: 0;
     }
     .text{
         display: none;
@@ -533,6 +538,7 @@ input[name="addonI"]:checked~span {
     background-image: url(./assets/images/bg-sidebar-mobile.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
  
 
 }
@@ -543,15 +549,21 @@ input[name="addonI"]:checked~span {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 .main{
     width: 345px;
+    height: 375px;
     background-color: var(--White);
 }
 .pinfo{
     width: 345px;
+    height: 375px;
     padding: 30px;
     box-sizing: border-box;
+    position: absolute;
+    top: 90px;
+    background: var(--White);
 }
 .pinfo--title {
 font-size: 1.5rem;
@@ -561,8 +573,22 @@ font-size: 1.5rem;
     }
 .pinfo--fields input {
 width: 290px;
+height: 40px;
 }
 footer{
     display: none;
+}
+.btn {
+    width: 100%;
+    height: 70px;
+    background: var(--White);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.btn--NStep {
+ right: 16px;   
 }
 }
