@@ -55,7 +55,7 @@ body {
     padding: 16px;
     box-sizing: border-box;
     display: flex;
-
+    box-shadow: 0px 4px 10px 0px #e3e3e3;
 }
 
 .tab {
@@ -129,9 +129,11 @@ body {
 .pinfo,
 .SYP,
 .addons,
-.summary,.thankYou {
+.summary,
+.thankYou {
     width: 450px;
     height: 500px;
+    
 }
 
 .pinfo--title,
@@ -160,16 +162,19 @@ body {
 .pinfo--fields .labeldiv {
     color: var(--Marineblue);
     margin-top: 30px;
-    
+
 }
-.labeldiv{
+
+.labeldiv {
     position: relative;
 }
-.labeldiv span{
+
+.labeldiv span {
     position: absolute;
     right: 0;
     color: var(--Strawberryred);
 }
+
 .pinfo--fields input {
     width: 450px;
     height: 50px;
@@ -184,13 +189,14 @@ body {
     box-sizing: border-box;
 }
 
-.pinfo--fields input::after{
+.pinfo--fields input::after {
     content: '222';
     background-color: blueviolet;
     width: 100%;
-    color:yellow;
+    color: yellow;
     font-size: 50px;
 }
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -439,33 +445,39 @@ input[name="addonI"]:checked~span {
     box-sizing: border-box;
 
 }
-.plan--details table td{
-    padding:  15px;
-    
+
+.plan--details table td {
+    padding: 15px;
+
 }
-.plan--details table a{
+
+.plan--details table a {
     color: var(--Coolgray);
 }
-.plan--details table a:hover{
+
+.plan--details table a:hover {
     color: var(--Purplishblue);
 }
 
-.summary--fields div:last-child{
+.summary--fields div:last-child {
     width: inherit;
     padding: 20px;
-    
+
 }
-.summary--fields div:last-child p{
+
+.summary--fields div:last-child p {
     display: inline-block;
     color: var(--Purplishblue);
     font-family: "ubuntu-bold";
 }
-.summary--fields div:last-child p:first-child{
-  color: var(--Coolgray);
+
+.summary--fields div:last-child p:first-child {
+    color: var(--Coolgray);
     width: 335px;
     font-family: "ubuntu-regular";
 }
-.thankYou--Fields{
+
+.thankYou--Fields {
     width: inherit;
     height: inherit;
     display: flex;
@@ -474,19 +486,23 @@ input[name="addonI"]:checked~span {
     flex-direction: column;
     text-align: center;
 }
-.thankYou--Fields h1{
+
+.thankYou--Fields h1 {
     color: var(--Marineblue);
 }
-.thankYou--Fields p{
+
+.thankYou--Fields p {
     color: var(--Coolgray);
 }
 
 .pinfo,
 .SYP,
 .addons,
-.summary,.thankYou{
+.summary,
+.thankYou {
     display: none;
 }
+
 .active {
     display: initial;
 }
@@ -505,90 +521,131 @@ input[name="addonI"]:checked~span {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
 /* -----------tablet------------- */
 @media screen and (max-width:900px) {
-.form {
-    width: 750px;
-}
+    .form {
+        width: 750px;
+    }
 }
 
 
 /* --------------Phone------------------- */
 @media screen and (max-width:500px) {
-    body{
+    body {
+
         justify-content: flex-start;
     }
+
+    main {
+        width: 100%;
+    }
+
     .form {
         display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--Magnolia);
-    width: 100%;
-    height: auto;
-    padding: 0;
+        align-items: center;
+
+        flex-direction: column;
+        background-color: var(--Magnolia);
+        width: 100%;
+        height: 100svh;
+        padding: 0;
     }
-    .text{
+
+    .text {
         display: none;
     }
-  
-.tab {
-    width: 100%;
-    height: 172px;
-    background-image: url(./assets/images/bg-sidebar-mobile.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
- 
 
-}
-.Carousel {
-    width: 100%;
-    height: 34px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-.main{
-    width: 345px;
-    height: 375px;
-    background-color: var(--White);
-}
-.pinfo{
-    width: 345px;
-    height: 375px;
-    padding: 30px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 90px;
-    background: var(--White);
-}
-.pinfo--title {
-font-size: 1.5rem;
-}
-.pinfo--descrp {
-    font-size: 1rem;
+    .tab {
+        width: 100%;
+        height: 172px;
+        background-image: url(./assets/images/bg-sidebar-mobile.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0px;
+
+
     }
-.pinfo--fields input {
-width: 290px;
-height: 40px;
-}
-footer{
-    display: none;
-}
-.btn {
-    width: 100%;
-    height: 70px;
-    background: var(--White);
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-    align-items: center;
-}
 
-.btn--NStep {
- right: 16px;   
-}
+    .Carousel {
+        width: 100%;
+        height: 34px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        margin-top: 30px;
+    }
+
+    .main {
+        width: 345px;
+        height: auto;
+        background-color: var(--White);
+ 
+    }
+
+    .pinfo ,.SYP,.addons,.summary,.thankYou{
+        width: 345px;
+        height: auto;
+        padding: 30px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 90px;
+        background: var(--White);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px 0px #e3e3e3;
+    }
+
+    .pinfo--title,.SYP--title {
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+
+    .pinfo--descrp,.SYP--descrp {
+        font-size: 1rem;
+    }
+
+    .pinfo--fields input {
+        width: 290px;
+        height: 40px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .btn {
+        width: 100%;
+        height: 70px;
+        background: var(--White);
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn--NStep {
+        right: 16px;
+    }
+    .SYP--fields{
+        display: block;
+       
+    }
+    .plan{
+        width: 100%;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        padding-top: 0px;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .plan .title {
+        margin: 0px;
+    }
+    .plan--switch {
+        width: 100%;
+    }
 }
