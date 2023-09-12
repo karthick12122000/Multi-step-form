@@ -93,7 +93,7 @@ if(Pnumber.value==""||email.value==""||name.value==""){
 
            let total_Rate=0;
 
-            let rate = document.getElementById(selectedPlan.value.toLowerCase()).children[2];
+            let rate = document.getElementById(selectedPlan.value.toLowerCase()).children[1].children[1];
             plan.style="border-collapse:collapse";
            
             let rateS=rate.innerText;
@@ -179,9 +179,9 @@ toggle.addEventListener('change', (e) => {
         planDetails[0].innerText = "$90/yr";
         planDetails[1].innerText = "$120/yr";
         planDetails[2].innerText = "$150/yr";
-        planDiv[0].innerHTML += "<p class='free' style='color:var(--Marineblue)'>2 months free</p>";
-        planDiv[1].innerHTML += "<p class='free'  style='color:var(--Marineblue)'>2 months free</p>";
-        planDiv[2].innerHTML += "<p class='free' style='color:var(--Marineblue)'>2 months free</p>";
+        planDiv[0].querySelector("div").innerHTML += "<p class='free' style='color:var(--Marineblue)'>2 months free</p>";
+        planDiv[1].querySelector("div").innerHTML += "<p class='free'  style='color:var(--Marineblue)'>2 months free</p>";
+        planDiv[2].querySelector("div").innerHTML += "<p class='free' style='color:var(--Marineblue)'>2 months free</p>";
 
 
         addonDetails[0].innerText = "+$10/yr";
