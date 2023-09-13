@@ -14,43 +14,43 @@ function activeFun(e) {
 
     //////////////////////////////-----------index
     if (e == "next") {
-var name=document.getElementById("name");
+        var name = document.getElementById("name");
 
-var lable=document.querySelectorAll(".labeldiv")
-if(name.value==""){
-    lable[0].querySelector("span").innerText="This field is required";
-    name.style="border-color: var(--Strawberryred)";
-    
-}
-else{
-    lable[0].querySelector("span").innerText="";
-    name.style="border-color: var(--Lightgray)";
-}
-var email=document.getElementById("email");
+        var lable = document.querySelectorAll(".labeldiv")
+        if (name.value == "") {
+            lable[0].querySelector("span").innerText = "This field is required";
+            name.style = "border-color: var(--Strawberryred)";
 
-if(email.value==""){
-    lable[1].querySelector("span").innerText="This field is required";
-    email.style="border-color: var(--Strawberryred)";
-    
-}
-else{
-    lable[1].querySelector("span").innerText="";
-    email.style="border-color: var(--Lightgray)";
-}
+        }
+        else {
+            lable[0].querySelector("span").innerText = "";
+            name.style = "border-color: var(--Lightgray)";
+        }
+        var email = document.getElementById("email");
 
-var Pnumber=document.getElementById("Pnumber");
+        if (email.value == "") {
+            lable[1].querySelector("span").innerText = "This field is required";
+            email.style = "border-color: var(--Strawberryred)";
 
-if(Pnumber.value==""){
-    lable[2].querySelector("span").innerText="This field is required";
-    Pnumber.style="border-color: var(--Strawberryred)";
-}
-else{
-    lable[2].querySelector("span").innerText="";
-    Pnumber.style="border-color: var(--Lightgray)";
-}
-if(Pnumber.value==""||email.value==""||name.value==""){
-    return false;
-}
+        }
+        else {
+            lable[1].querySelector("span").innerText = "";
+            email.style = "border-color: var(--Lightgray)";
+        }
+
+        var Pnumber = document.getElementById("Pnumber");
+
+        if (Pnumber.value == "") {
+            lable[2].querySelector("span").innerText = "This field is required";
+            Pnumber.style = "border-color: var(--Strawberryred)";
+        }
+        else {
+            lable[2].querySelector("span").innerText = "";
+            Pnumber.style = "border-color: var(--Lightgray)";
+        }
+        if (Pnumber.value == "" || email.value == "" || name.value == "") {
+            return false;
+        }
 
         var nID = IdList[index + 1];
         GBack.style.display = 'initial';
@@ -58,20 +58,20 @@ if(Pnumber.value==""||email.value==""||name.value==""){
         //////------------------------------------ final page
 
         if ((index + 1) == 4) {
-            nextBTN.style.display = "none";
-            GBack.style.display = "none";
-            
+
+            document.querySelector(".btn").style.display = "none";
+
             activEle.classList.remove("active");
             let ele = document.getElementById("thankYou");
             ele.classList.add("active");
         }
 
 
-        
+
         if ((index + 1) == 3) {
             ///////////////////////-----------------Confirm BTN
             nextBTN.innerText = "Confirm";
-
+            nextBTN.style = "background: var(--Purplishblue)";
             //////////////---------------summary
             var planDetails = document.querySelector(".plan--details");
 
@@ -83,22 +83,22 @@ if(Pnumber.value==""||email.value==""||name.value==""){
             var selectedPlan = document.querySelector("[name='plan']:checked");
             let plan = document.createElement("table");
             let pack = "Monthly";
-            let totalPER="per month";
-            let per="mo";
+            let totalPER = "per month";
+            let per = "mo";
             if (toggle.checked == true) {
                 pack = "Yearly";
-                totalPER="per year";
-                 per="yr";
+                totalPER = "per year";
+                per = "yr";
             }
 
-           let total_Rate=0;
+            let total_Rate = 0;
 
             let rate = document.getElementById(selectedPlan.value.toLowerCase()).children[1].children[1];
-            plan.style="border-collapse:collapse";
-           
-            let rateS=rate.innerText;
-            rateS=rateS.slice(rateS.indexOf("$")+1,rateS.indexOf("/"));
-            total_Rate+=Number(rateS);
+            plan.style = "border-collapse:collapse";
+
+            let rateS = rate.innerText;
+            rateS = rateS.slice(rateS.indexOf("$") + 1, rateS.indexOf("/"));
+            total_Rate += Number(rateS);
             plan.innerHTML = `<tbody><tr style="color: var(--Marineblue);font-family: 'ubuntu-bold';"><td style="width:350px; padding-top: 0px; border-bottom: 1px solid var(--Coolgray);"><p style="margin-top: 0px;">${selectedPlan.value} (${pack})</p><a href="#" id="change" onclick="change()">Change</a><br></td><td style="      padding-top: 0px;  border-bottom: 1px solid var(--Coolgray);">${rate.innerText}</td></tr>`;
 
 
@@ -112,26 +112,25 @@ if(Pnumber.value==""||email.value==""||name.value==""){
                 if (selectedValue.checked) {
 
                     let addonRate = document.querySelector(`#${selectedValue.id.substring(0, selectedValue.id.length - 1)}`).children[2];
-                    let rateA=addonRate.innerText;
-                    rateA=rateA.slice(rateA.indexOf("$")+1,rateA.indexOf("/"));
-                    total_Rate+=Number(rateA);
+                    let rateA = addonRate.innerText;
+                    rateA = rateA.slice(rateA.indexOf("$") + 1, rateA.indexOf("/"));
+                    total_Rate += Number(rateA);
                     plan.innerHTML += `<tr><td style="color: var(--Coolgray);">${selectedValue.value}</td><td style="color: var(--Marineblue);">${addonRate.innerText}</td></tr>`;
                 }
             }
-            plan.innerHTML +="</tbody>"
+            plan.innerHTML += "</tbody>"
             planDetails.appendChild(plan);
-            let summaryF=document.querySelector(".summary--fields");
+            let summaryF = document.querySelector(".summary--fields");
             summaryF.lastChild.remove()
-            summaryF.innerHTML+=`<div><p>Total (${totalPER})</p><p>$${total_Rate}/${per}</p></div>`
+            summaryF.innerHTML += `<div><p>Total (${totalPER})</p><p>$${total_Rate}/${per}</p></div>`
         }
-        else {
-            nextBTN.innerText = "Next Step"
-        }
+
 
 
     }
     else {
-
+        nextBTN.innerText = "Next Step";
+        nextBTN.style = "background:var(--Marineblue)";
         var nID = IdList[index - 1];
 
         if ((index - 1) == 0) {
@@ -196,9 +195,9 @@ toggle.addEventListener('change', (e) => {
         planDetails[0].innerText = "$9/mo";
         planDetails[1].innerText = "$12/mo";
         planDetails[2].innerText = "$15/mo";
-        planDiv[0].removeChild(planDiv[0].lastElementChild);
-        planDiv[1].removeChild(planDiv[1].lastElementChild);
-        planDiv[2].removeChild(planDiv[2].lastElementChild);
+        planDiv[0].querySelector("div").removeChild(planDiv[0].querySelector("div").lastElementChild);
+        planDiv[1].querySelector("div").removeChild(planDiv[1].querySelector("div").lastElementChild);
+        planDiv[2].querySelector("div").removeChild(planDiv[2].querySelector("div").lastElementChild);
         addonDetails[0].innerText = "+$1/mo";
         addonDetails[1].innerText = "+$2/mo";
         addonDetails[2].innerText = "+$2/mo";
@@ -207,18 +206,20 @@ toggle.addEventListener('change', (e) => {
 });
 ////------------------change
 
- var change= function(){
+var change = function () {
 
     ///////////////------------active
-   
-        let activEle = document.querySelector(".active");
-        let activeTab = document.querySelector(".activeT");
-        activEle.classList.remove("active");
-        activeTab.classList.remove("activeT");
-        let ele = document.getElementById("plan");
-        ele.classList.add("active");
-        let tab = document.getElementById("planT");
-        tab.classList.add("activeT");
 
-    
+    let activEle = document.querySelector(".active");
+    let activeTab = document.querySelector(".activeT");
+    activEle.classList.remove("active");
+    activeTab.classList.remove("activeT");
+    let ele = document.getElementById("plan");
+    ele.classList.add("active");
+    let tab = document.getElementById("planT");
+    tab.classList.add("activeT");
+    nextBTN.innerText = "Next Step"
+    nextBTN.style = "background: var(--Marineblue)";
+
+
 };

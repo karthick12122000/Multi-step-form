@@ -133,7 +133,7 @@ body {
 .thankYou {
     width: 450px;
     height: 500px;
-    
+
 }
 
 .pinfo--title,
@@ -201,6 +201,9 @@ input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+.plan .title, .plan .rate{
+font-size: 0.9rem;
 }
 
 .btn {
@@ -583,10 +586,14 @@ input[name="addonI"]:checked~span {
         width: 345px;
         height: auto;
         background-color: var(--White);
- 
+
     }
 
-    .pinfo ,.SYP,.addons,.summary,.thankYou{
+    .pinfo,
+    .SYP,
+    .addons,
+    .summary,
+    .thankYou {
         width: 345px;
         height: auto;
         padding: 30px;
@@ -598,12 +605,16 @@ input[name="addonI"]:checked~span {
         box-shadow: 0px 4px 10px 0px #e3e3e3;
     }
 
-    .pinfo--title,.SYP--title,.addons--title {
+    .pinfo--title,
+    .SYP--title,
+    .addons--title,.summary--title {
         font-size: 1.5rem;
         margin: 0px;
     }
 
-    .pinfo--descrp,.SYP--descrp,.addons--descrp {
+    .pinfo--descrp,
+    .SYP--descrp,
+    .addons--descrp,.summary--descrp {
         font-size: 1rem;
     }
 
@@ -629,11 +640,13 @@ input[name="addonI"]:checked~span {
     .btn--NStep {
         right: 16px;
     }
-    .SYP--fields{
+
+    .SYP--fields {
         display: block;
-       
+
     }
-    .plan{
+
+    .plan {
         width: 100%;
         height: 75px;
         display: flex;
@@ -642,19 +655,59 @@ input[name="addonI"]:checked~span {
         gap: 15px;
         margin-top: 15px;
     }
+
     .plan .title {
         margin: 0px;
     }
+
     .plan--switch {
         width: 100%;
     }
+
     .addon {
         width: 100%;
+        position: relative;
     }
+
+    .addons--fields {
+        gap: 20px;
+    }
+
+    .addons--fields .rateA {
+        position: absolute;
+        right: 5px;
+        font-size: 0.8rem;
+    }
+
     .addon div:nth-child(2) {
         width: auto;
+        font-size: 0.9rem;
     }
-    .plan--details,.thankYou--Fields{
+
+    .addon div:nth-child(2) p:nth-child(2) {
+
+        font-size: 0.8rem;
+    }
+
+    .plan--details,
+    .thankYou--Fields {
         width: 100%;
+    }
+    .plan--details{
+        margin-top: 30px;
+    }
+    .plan--details table td {
+        padding: 15px 0px;
+    }
+    .addons--fields label {
+        width: 100%;
+    }
+
+    .addon div:nth-child(1) {
+        width: 45px;
+    }
+    .summary--fields div:last-child p:first-child {
+        
+        width: 75%;
     }
 }
