@@ -25,6 +25,7 @@ function activeFun(e) {
         else {
             lable[0].querySelector("span").innerText = "";
             name.style = "border-color: var(--Lightgray)";
+
         }
         var email = document.getElementById("email");
 
@@ -36,6 +37,19 @@ function activeFun(e) {
         else {
             lable[1].querySelector("span").innerText = "";
             email.style = "border-color: var(--Lightgray)";
+
+            var flag = false;
+            let regex = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$");
+
+            if (regex.test(email.value) == false) {
+                lable[1].querySelector("span").innerText = "Please enter valid email";
+                email.style = "border-color: var(--Strawberryred)";
+                flag = true;
+            }
+            else {
+                lable[1].querySelector("span").innerText = "";
+                email.style = "border-color: var(--Lightgray)";
+            }
         }
 
         var Pnumber = document.getElementById("Pnumber");
@@ -47,6 +61,23 @@ function activeFun(e) {
         else {
             lable[2].querySelector("span").innerText = "";
             Pnumber.style = "border-color: var(--Lightgray)";
+
+            const re = /^\(?([0-9]{1,5})\)?([0-9]{10})$/g;
+            let regex = new RegExp(re);
+            if (regex.test(Pnumber.value.toString()) == false) {
+                lable[2].querySelector("span").innerText = "Please enter valid number";
+                Pnumber.style = "border-color: var(--Strawberryred)";
+                flag = true;
+               
+            } else {
+              
+                lable[2].querySelector("span").innerText = "";
+                Pnumber.style = "border-color: var(--Lightgray)";
+
+            }
+        }
+        if (flag == true) {
+            return false;
         }
         if (Pnumber.value == "" || email.value == "" || name.value == "") {
             return false;
